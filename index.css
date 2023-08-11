@@ -38,6 +38,28 @@ body {
   height: 76.817px;
   transform: rotate(-30deg);
   flex-shrink: 0;
+  width: 337.167px;
+  height: 167.777px;
+  flex-shrink: 0;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 123.31px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 138.724px; /* 112.5% */
+  width: 233.911px;
+  height: 116.264px;
+  transform: rotate(-30deg);
+  flex-shrink: 0;
+  border-radius: 10.381px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 72.265px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 81.299px; /* 112.5% */
+  border: 5px solid red;
+  color: red;
 }
 
 .like-sticker {
@@ -54,7 +76,7 @@ body {
   line-height: 95.438px;
   border-radius: 10.381px;
   border: #29d78a, #6ef2f2;
-  border: 2px solid magenta;
+  padding: 2em;
 }
 
 .sticker-container {
