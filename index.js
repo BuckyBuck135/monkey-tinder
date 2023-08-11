@@ -1,4 +1,4 @@
-import dogs from "./data.js";
+import dogsData from "./data.js";
 import Dog from "./dog.js";
 
 const rejectEl = document.getElementById("reject");
@@ -11,68 +11,59 @@ rejectEl.addEventListener("click", reject);
 likeEl.addEventListener("click", like);
 
 let currentDogIndex = 0;
-const currentDog = new Dog(dogs[currentDogIndex]);
+const currentDog = new Dog(dogsData[currentDogIndex]);
+
+let likedArray = [];
 
 renderDog(currentDog);
 
 function reject() {
-  document.getElementById("nope-sticker").classList.remove("hidden");
-  document.getElementById("like-sticker").classList.add("hidden");
+  console.log("Reject clicked");
+  document.getElementById("nope-wrapper").classList.remove("hidden");
+  document.getElementById("like-wrapper").classList.add("hidden");
+  currentDog.hasBeenSwiped = true;
+  currentDog.hasBeenLiked = false;
   delay();
-  //   getNewDog();
 }
 
 function like() {
-  //   console.log("click like");
-  document.getElementById("like-sticker").classList.remove("hidden");
-  document.getElementById("nope-sticker").classList.add("hidden");
+  console.log("like clicked");
+  document.getElementById("like-wrapper").classList.remove("hidden");
+  document.getElementById("nope-wrapper").classList.add("hidden");
+  currentDog.hasBeenSwiped = true;
+  currentDog.hasBeenLiked = true;
   delay();
-  //   getNewDog();
 }
 
-function renderDog(currentDog) {
-  //   delay();
-  postContainerEl.innerHTML = currentDog.getDogHtml();
-  //   document.getElementById("like-sticker").classList.add("hidden");
-  //   document.getElementById("nope-sticker").classList.add("hidden");
+function renderDog(dog) {
+  postContainerEl.innerHTML = dog.getDogHtml();
+  getNewDog();
 }
-
-// function match() {
-//   currentDog.getMatchStatus(true);
-//   getNewDog(currentDog);
 
 function delay() {
-  setTimeout(getNewDog, 2000);
+  setTimeout(getNewDog, 3000);
 }
 
-// function getNewDog() {
-//   document.getElementById("like-sticker").classList.add("hidden");
-//   document.getElementById("nope-sticker").classList.add("hidden");
-//   currentDogIndex += 1;
-//   if (dogs.length === currentDogIndex + 1) {
-//     renderDog(currentDog);
-//   } else {
-//     currentDogIndex = 0;
-//     renderDog(currentDog);
-//   }
 function getNewDog() {
-  if (currentDogIndex + 1 >= dogs.length) {
-    currentDogIndex = 0;
+  document.getElementById("nope-wrapper").classList.add("hidden");
+  document.getElementById("like-wrapper").classList.add("hidden");
+  if (currentDogIndex + 1 >= dogsData.length) {
+    noMatchesMessage();
   } else {
     currentDogIndex += 1;
   }
-  const newDog = new Dog(dogs[currentDogIndex]);
+  const newDog = new Dog(dogsData[currentDogIndex]);
   renderDog(newDog);
-
-  //   setTimeout(getNewDog, 2000);
 }
 
+// function noMatchesMessage() {
+//   postContainerEl.innerHTML = `<h2> You have no matches</h2>`;
 // }
-
-// function match() {
-//   currentDog.getMatchStatus(true);
-//   getNewDog();
-// }
-// function setBackground(path) {
-//   postContainerEl.style.backgroundImage = `url(${path})`;
-//
+// Render the page when loaded
+// Create eventlistener for clicking either cross or HTMLTextAreaElement
+// Make nope and like badges appear when clicking on buttons
+// Set time out for transition to new dog
+// Show new dog after a few seconds
+// Create an end page
+// Remove the like and nope buttons from end page
+// Adjust message in case none of the images have been liked.

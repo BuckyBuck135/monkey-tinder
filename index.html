@@ -21,28 +21,47 @@
     </header>
 
     <main>
-      <div id="post-container" class="post-container"></div>
+      <div id="post-container" class="post-container">
+        <!--render JS -->
+      </div>
 
-      <div class="sticker-container">
-        <p class="sticker nope-sticker hidden" id="nope-sticker">NOPE</p>
-        <p class="sticker like-sticker hidden" id="like-sticker">LIKE</p>
-        <!-- <img
+      <!-- <div class="sticker-container"> -->
+      <div class="sticker-wrapper nope-wrapper hidden" id="nope-wrapper">
+        <p class="sticker nope-sticker" id="nope-sticker">NOPE</p>
+      </div>
+      <div class="sticker-wrapper like-wrapper hidden" id="like-wrapper">
+        <p class="sticker like-sticker" id="like-sticker">LIKE</p>
+      </div>
+      <!-- <img
           src="./images/nope-sticker.png"
           class="sticker nope-sticker hidden"
           id="nope-sticker"
         /> -->
-        <!-- <img
+      <!-- <img
           src="./images/like-sticker.png"
           class="sticker like-sticker hidden"
           id="like-sticker"
         /> -->
-      </div>
+      <!-- </div> -->
 
-      <div>
-        <div class="action-buttons-container">
-          <img src="./images/reject-button-icon.svg" id="reject" alt="" />
-          <img src="./images/heart-button-icon.svg" id="like" alt="" />
-        </div>
+      <div class="action-buttons-container">
+        <button class="btn-container">
+          <img
+            src="./images/reject-icon.svg"
+            class="reject action-btn"
+            id="reject"
+            alt=""
+          />
+        </button>
+
+        <button class="btn-container">
+          <img
+            src="./images/heart-icon.svg"
+            class="like action-btn"
+            id="like"
+            alt=""
+          />
+        </button>
       </div>
     </main>
 

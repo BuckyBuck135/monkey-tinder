@@ -13,10 +13,20 @@ class Dog {
     <img src="${avatar}" class="dog-img">`;
   }
 
-  getMatchStatus(boolean) {
-    this.hasBeenLiked = boolean;
+  hasBeenSwiped() {
     this.hasBeenSwiped = true;
   }
+  hasBeenLiked() {
+    this.hasBeenLiked = true;
+  }
+
+  //   getMatchLikeStatus(boolean) {
+  //     this.hasBeenLiked = boolean;
+  //     this.hasBeenSwiped = true;
+  //   }
+  //   getMatchRejectStatus(boolean) {
+  //     this.hasBeen;
+  //   }
 }
 
 export default Dog;
