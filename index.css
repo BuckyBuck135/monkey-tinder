@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.dog-info {
+  width: 100%;
+  margin-right: 3em;
+  margin-left: 1em;
+}
+.dog-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 1em;
+  height: auto;
+}
+
+.nope-sticker {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  text-align: center;
+  font-size: 72.265px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 81.299px;
+  transform: rotate(-30deg);
+  width: 196.226px;
+  height: 76.817px;
+  transform: rotate(-30deg);
+  flex-shrink: 0;
+}
+
+.like-sticker {
+  position: absolute;
+  width: 172.319px;
+  height: 89.966px;
+  transform: rotate(-30deg);
+  flex-shrink: 0;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 84.834px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 95.438px;
+  border-radius: 10.381px;
+  border: #29d78a, #6ef2f2;
+  border: 2px solid magenta;
+}
+
+.sticker-container {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 72.265px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 81.299px;
+}
+
+.sticker {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 72.265px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 81.299px;
+  transform: rotate(-30deg);
+  width: 196.226px;
+  height: 76.817px;
+  transform: rotate(-30deg);
+  flex-shrink: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.action-buttons-container {
+  text-align: center;
+  margin: 0 18px;
+}
+.action-buttons img {
+  width: 91.871px;
+  height: 91.871px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 18px;
+}
+
+.post-container {
+  position: relative;
+  background-size: cover;
+  height: 100%;
+  margin-top: 19px;
+  border: 2px solid magenta;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em; /* Add padding to create space between content and border */
+}
+
+.dog-info {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 100%;
+  padding: 10px;
+  color: white;
+}
+
+h1 {
+  color: #f8f8f8;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+}
+h2 {
+  color: #b7b7b7;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
