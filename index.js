@@ -27,10 +27,22 @@ function like() {
   document.getElementById("nope-sticker").classList.add("hidden");
 }
 
-function renderDog(dog) {
-  postContainerEl.innerHTML = dog.getDogHtml();
+function renderDog(currentDog) {
+  postContainerEl.innerHTML = currentDog.getDogHtml();
 }
 
+// function getNewDog() {
+//   setTimeout(function () {
+//     currentDogIndex += 1;
+//     currentDog = new Dog(dogs[currentDogIndex]);
+//     renderDog();
+//   }, 2000);
+// }
+
+// function match() {
+//   currentDog.getMatchStatus(true);
+//   getNewDog();
+// }
 // function setBackground(path) {
 //   postContainerEl.style.backgroundImage = `url(${path})`;
 // }

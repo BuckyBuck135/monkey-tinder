@@ -12,12 +12,11 @@ class Dog {
         </div>
     <img src="${avatar}" class="dog-img">`;
   }
-}
-// return `<div class="dog-img">;
-//
-// </div>`;
-//   <div class="dog-info">
 
-//   </div>`;
+  getMatchStatus(boolean) {
+    this.hasBeenLiked = boolean;
+    this.hasBeenSwiped = true;
+  }
+}
 
 export default Dog;

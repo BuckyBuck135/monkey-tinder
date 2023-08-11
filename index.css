@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100vh;
   max-width: 900px;
   background-color: #fff;
   margin: 0 auto;
@@ -20,9 +21,7 @@ body {
 .dog-img {
   display: block;
   width: 100%;
-  height: 100%;
-  margin: 0 1em;
-  height: auto;
+  border-radius: 15px;
 }
 
 .nope-sticker {
@@ -105,38 +104,26 @@ header {
 
 .post-container {
   position: relative;
-  background-size: cover;
-  height: 100%;
-  margin-top: 19px;
-  border: 2px solid magenta;
+  /* border: 2px solid magenta; */
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
-  padding: 1em; /* Add padding to create space between content and border */
+  padding: 0.5em;
 }
 
 .dog-info {
   position: absolute;
   bottom: 0;
   left: 20px;
-  width: 100%;
+  width: 70%;
   padding: 10px;
-  color: white;
 }
 
 h1 {
   color: #f8f8f8;
-  font-family: Poppins;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
   line-height: 36px;
 }
 h2 {
   color: #b7b7b7;
-  font-family: Poppins;
-  font-size: 24px;
-  font-style: normal;
   font-weight: 400;
   line-height: 32px;
 }
