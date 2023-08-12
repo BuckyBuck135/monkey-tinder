@@ -4,7 +4,8 @@ class Dog {
   }
 
   getDogHtml() {
-    const { name, avatar, age, bio, hasBeenSwiped, hasBeenLiked } = this;
+    // const { name, avatar, age, bio, hasBeenSwiped, hasBeenLiked } = this;
+    const { name, avatar, age, bio } = this;
     let dogHtml = `<div class = "dog-info">
         <h1 class="dog-name">${name}, ${age}</h1>
         <p class="dog-bio">${bio}</h2>
@@ -12,12 +13,12 @@ class Dog {
         <img src="${avatar}" class="dog-img">`;
     return dogHtml;
   }
-  hasBeenSwiped() {
-    this.hasBeenSwiped != this.hasBeenSwiped;
-  }
-  hasBeenLiked() {
-    this.hasBeenSwiped != this.hasBeenSwiped;
-  }
+  //   hasBeenSwiped() {
+  //     this.hasBeenSwiped = true;
+  //   }
+  //   hasBeenLiked() {
+  //     this.hasBeenLiked = true;
+  //   }
 }
 
 export default Dog;
