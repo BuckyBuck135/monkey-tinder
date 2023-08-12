@@ -21,48 +21,34 @@
     </header>
 
     <main>
-      <div id="post-container" class="post-container">
-        <!--render JS -->
-      </div>
+      <section class="post-container" id="post-container">
+        <!-- Rendered dynamically in JS-->
+      </section>
 
-      <!-- <div class="sticker-container"> -->
-      <div class="sticker-wrapper nope-wrapper hidden" id="nope-wrapper">
-        <p class="sticker nope-sticker" id="nope-sticker">NOPE</p>
-      </div>
-      <div class="sticker-wrapper like-wrapper hidden" id="like-wrapper">
-        <p class="sticker like-sticker" id="like-sticker">LIKE</p>
-      </div>
-      <!-- <img
-          src="./images/nope-sticker.png"
-          class="sticker nope-sticker hidden"
-          id="nope-sticker"
-        /> -->
-      <!-- <img
-          src="./images/like-sticker.png"
-          class="sticker like-sticker hidden"
-          id="like-sticker"
-        /> -->
-      <!-- </div> -->
+      <section class="badge-container">
+        <img src="./images/badge-nope.png" class="nope-badge" />
+        <img src="./images/badge-like.png" class="like-badge" />
+      </section>
 
-      <div class="action-buttons-container">
-        <button class="btn-container">
+      <section class="action-buttons-container">
+        <button class="btn-container" id="reject-btn" aria-label="reject badge">
           <img
-            src="./images/reject-icon.svg"
+            src="./images/icon-cross.png"
             class="reject action-btn"
             id="reject"
             alt=""
           />
         </button>
 
-        <button class="btn-container">
+        <button class="btn-container" id="like-btn" aria-label="like badge">
           <img
-            src="./images/heart-icon.svg"
+            src="./images/icon-heart.png"
             class="like action-btn"
             id="like"
             alt=""
           />
         </button>
-      </div>
+      </section>
     </main>
 
     <script src="./index.js" type="module"></script>

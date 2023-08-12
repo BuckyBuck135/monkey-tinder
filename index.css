@@ -12,11 +12,11 @@ body {
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
   user-select: none;
-  border: 2px solid green;
 }
 main {
   background: linear-gradient(180deg, #fff 0%, #f6f7fb 100%);
 }
+
 /* Header */
 header {
   display: flex;
@@ -26,156 +26,79 @@ header {
 
 /* Dog Post Section */
 
-.post-container {
-  position: relative;
-  /* border: 2px solid magenta; */
+.dog-img {
+  display: block;
+  margin: 0;
   width: 100%;
-  max-width: 800px;
-  padding: 1em;
+  border-radius: 15px;
 }
-.dog-info {
-  width: 100%;
-  margin-right: 3em;
-  margin-left: 1em;
+
+.post-container {
+  padding: 1em;
+  position: relative;
 }
 
 .dog-info {
   position: absolute;
-  bottom: 0;
-  left: 20px;
-  width: 70%;
-  padding: 10px;
+  bottom: 2em;
+  left: 2em;
+  margin: 0;
+  width: 60%;
 }
-.dog-img {
-  display: block;
+.dog-name,
+.dog-bio {
+  margin: 0;
   width: 100%;
-  border-radius: 15px;
-  object-fit: cover;
 }
-h1 {
+
+.dog-name {
   color: #f8f8f8;
   line-height: 36px;
 }
-h2 {
+.dog-bio {
   color: #b7b7b7;
   font-weight: 400;
   line-height: 32px;
 }
 
-/* Badges */
-
-.sticker-wrapper {
-  /* width: 233.911px;
-  height: 116.264px; */
-  /* transform: rotate(-30deg); */
-  /* flex-shrink: 0; */
-  border-radius: 10.381px;
-  /* width: 233.911px;
-  height: 116.264px;
-  transform: rotate(-30deg); */
-  /* flex-shrink: 0; */
-}
-.sticker {
-  text-align: center;
-  font-family: Poppins;
-  font-size: 72.265px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 81.299px;
+.nope-badge,
+.like-badge {
+  display: block;
+  width: 40%;
   position: absolute;
-  top: 100px;
-  left: 40px;
-  border-radius: 10.381px;
-  color: red;
-  transform: rotate(-30deg);
-}
-.nope-sticker {
-  border: 10px solid red;
-  color: red;
-  width: 233.911px;
-  height: 116.264px;
+  left: 30px;
+  top: 150px;
+  transform: rotate(-35deg);
+  z-index: 1;
 }
 
-.like-sticker {
-  border: 10px solid #29d78a;
-  color: #29d78a;
-  width: 233.911px;
-  height: 116.264px;
-
-  /* border-image: linear-gradient(#29d78a, #6ef2f2); */
-}
-.like-wrapper {
-  border-image: linear-gradient(#29d78a, #6ef2f2);
-  border-width: 10px;
-}
-/* Utility Classes */
-.hidden {
-  display: none;
-}
-
-/* Action Buttons */
+/* Swipe buttons */
 .action-buttons-container {
-  text-align: center;
-  margin: 0 18px;
   display: flex;
-  justify-content: center;
-  gap: 2em;
-  padding: 3em;
+  justify-content: space-around;
+  padding: 2em;
 }
+
 .btn-container {
+  cursor: pointer;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0px 5px 5px #e9e9ea;
   border-radius: 50%;
   border: none;
-  padding: 1em;
-  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+.btn-container:hover,
+.btn-container:focus {
+  background-color: #ffe7ef;
 }
 
-.action-btn {
-  background-color: #fff;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center; */
-  /* width: 40px; */
-  /* height: 40px; */
-}
-btn-container {
-  border-radius: 100%;
-  padding: 1em;
-  display: flex;
-  margin-left: 1em;
-}
-.like {
-  fill: linear-gradient(221deg, #00d894 0%, #56e9cd 100%);
-}
-/* Hover Effects */
-.reject:hover,
-.reject:focus {
-  fill: #ffe7ef;
-  filter: drop-shadow(0px 10px 20px #edd9df);
-}
-
-/* .action-button-wrapper:hover,
-.action-button:focus, */
-.like:focus,
-.like:hover {
-  fill: #dbfff4;
-  filter: drop-shadow(0px 10px 20px #ccf1e6);
+.like:hover,
+.like:focus {
   background-color: #dbfff4;
 }
 
-.like img {
-  background: linear-gradient(221deg, #00d894 0%, #56e9cd 100%);
-  border: 2px solid black;
+.like,
+.reject {
+  vertical-align: middle;
 }
-
-/* @media (min-width: 400px) {
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  .dog-img {
-    margin: 0 2em;
-  }
-} */

@@ -2,31 +2,22 @@ class Dog {
   constructor(data) {
     Object.assign(this, data);
   }
+
   getDogHtml() {
     const { name, avatar, age, bio, hasBeenSwiped, hasBeenLiked } = this;
-
-    return `
-        <div class= "dog-info">
-            <h1>${name}, ${age}</h1>
-            <h2>${bio}</h2>
+    let dogHtml = `<div class = "dog-info">
+        <h1 class="dog-name">${name}, ${age}</h1>
+        <p class="dog-bio">${bio}</h2>
         </div>
-    <img src="${avatar}" class="dog-img">`;
+        <img src="${avatar}" class="dog-img">`;
+    return dogHtml;
   }
-
   hasBeenSwiped() {
-    this.hasBeenSwiped = true;
+    this.hasBeenSwiped != this.hasBeenSwiped;
   }
   hasBeenLiked() {
-    this.hasBeenLiked = true;
+    this.hasBeenSwiped != this.hasBeenSwiped;
   }
-
-  //   getMatchLikeStatus(boolean) {
-  //     this.hasBeenLiked = boolean;
-  //     this.hasBeenSwiped = true;
-  //   }
-  //   getMatchRejectStatus(boolean) {
-  //     this.hasBeen;
-  //   }
 }
 
 export default Dog;
