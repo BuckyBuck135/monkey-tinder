@@ -54,11 +54,15 @@ header {
 .dog-name {
   color: #f8f8f8;
   line-height: 36px;
+  font-size: 3rem;
+  margin-bottom: 1em;
 }
 .dog-bio {
   color: #b7b7b7;
   font-weight: 400;
   line-height: 32px;
+  font-size: 2rem;
+  margin-bottom: 1em;
 }
 
 .nope-badge,
@@ -101,6 +105,7 @@ header {
 .like,
 .reject {
   vertical-align: middle;
+  width: 30px;
 }
 
 .liked-avatar-img {

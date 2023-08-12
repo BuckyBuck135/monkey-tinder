@@ -12,6 +12,7 @@ let currentDogIndex = 0;
 let currentDog = new Dog(dogsData[currentDogIndex]);
 let likedDogsCount = 0;
 let likedArray = [];
+// let dogSwiped = false;
 
 render(currentDog);
 
@@ -20,6 +21,10 @@ function render() {
   document.querySelector(".nope-badge").style.display = "none";
   document.querySelector(".like-badge").style.display = "none";
   //   delay();
+}
+
+function delay() {
+  setTimeout(render, 1500);
 }
 
 actionBtnContainer.addEventListener("click", function (e) {
@@ -49,6 +54,7 @@ actionBtnContainer.addEventListener("click", function (e) {
       likedDogsCount
     );
   }
+  //   render();
   getNewDog();
 });
 
@@ -59,13 +65,14 @@ function getNewDog() {
     // render();
     delay();
   } else {
-    endPageHtml();
+    setTimeout(endPageHtml, 1500);
+    // endPageHtml();
   }
 }
 
-function delay() {
-  setTimeout(render, 1500);
-}
+// function delay() {
+//   setTimeout(render, 1500);
+// }
 
 function endPageHtml() {
   console.log("This is the end page");
