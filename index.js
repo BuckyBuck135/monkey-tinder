@@ -41,14 +41,14 @@ function renderDog(dog) {
 }
 
 function delay() {
-  setTimeout(getNewDog, 3000);
+  setTimeout(getNewDog, 1500);
 }
 
 function getNewDog() {
   document.getElementById("nope-wrapper").classList.add("hidden");
   document.getElementById("like-wrapper").classList.add("hidden");
   if (currentDogIndex + 1 >= dogsData.length) {
-    noMatchesMessage();
+    currentDogIndex = 0;
   } else {
     currentDogIndex += 1;
   }
