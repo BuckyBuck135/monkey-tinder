@@ -3,66 +3,87 @@
 }
 
 body {
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  border: 0;
   width: 100%;
-  height: 100vh;
-  max-width: 1000px;
-  background-color: #fff;
-  margin: 0 auto;
-  font-family: "Poppins", sans-serif;
-  user-select: none;
-}
-main {
-  background: linear-gradient(180deg, #fff 0%, #f6f7fb 100%);
+  border: 2px solid black;
 }
 
 /* Header */
 header {
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
-  margin: 24px 18px;
+  align-items: center;
+  /* margin: 24px 18px 20px; */
+  padding: 20px;
+  border: 2px solid blue;
 }
 
-/* Dog Post Section */
-
-.dog-img {
-  display: block;
-  margin: 0;
-  width: 100%;
-  border-radius: 15px;
+.logo {
+  width: 80px;
+  border-radius: 3px;
 }
 
-.post-container {
-  padding: 1em;
+main {
+  background: linear-gradient(180deg, #fff 0%, #f6f7fb 100%);
+}
+
+.dog-container {
   position: relative;
+}
+
+.img-container {
+  padding: 1em;
+  height: 500px;
+  width: 100%;
+}
+.dog-img {
+  border: 2px solid red;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .dog-info {
   position: absolute;
-  bottom: 2em;
-  left: 2em;
-  margin: 0;
-  width: 60%;
+  bottom: 1em;
+  left: 1em;
+  margin-right: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: solid 2px magenta;
+  padding: 0.2em;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
 }
+
 .dog-name,
 .dog-bio {
+  color: #f8f8f8;
   margin: 0;
-  width: 100%;
 }
 
 .dog-name {
-  color: #f8f8f8;
-  line-height: 36px;
-  font-size: 3rem;
-  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0.25em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .dog-bio {
-  color: #b7b7b7;
+  color: white;
   font-weight: 400;
   line-height: 32px;
-  font-size: 2rem;
-  margin-bottom: 1em;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
 }
 
 .nope-badge,
@@ -76,13 +97,14 @@ header {
   z-index: 1;
 }
 
-/* Swipe buttons */
 .action-buttons-container {
+  background-color: #f6f7fb;
   display: flex;
-  justify-content: space-around;
-  padding: 2em;
+  justify-content: center;
+  padding: 2em 0;
+  border: 2px solid magenta;
+  gap: 2em;
 }
-
 .btn-container {
   cursor: pointer;
   padding: 1em;
@@ -91,6 +113,7 @@ header {
   border-radius: 50%;
   border: none;
   transition: background-color 0.2s ease;
+  text-align: center;
 }
 .btn-container:hover,
 .btn-container:focus {
@@ -101,7 +124,6 @@ header {
 .like:focus {
   background-color: #dbfff4;
 }
-
 .like,
 .reject {
   vertical-align: middle;
@@ -109,23 +131,21 @@ header {
 }
 
 .liked-avatar-img {
-  /* display: block;
+  display: block;
   border: 2px solid blue;
   margin-bottom: 1em;
-  width: 150px; */
+  width: 150px;
   height: 200px;
-  /* width: 100%; */
-  /* object-fit: cover; */
-  /* border-radius: 50%; */
+  width: 100%;
+  object-fit: cover;
   border-radius: 10px;
 }
 
 .liked-img-container {
-  /* display: flex; */
-
-  /* flex-direction: row; */
-  /* flex-wrap: wrap;
-  justify-content: center; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2em;
 }
 .liked-container {
@@ -160,3 +180,37 @@ header {
   font-weight: bold;
   border: none;
 }
+
+/* @media (min-width: 825px) {
+      .dog-info {
+        width: 60%;
+        flex-shrink: 1;
+        margin: 0 auto;
+      } 
+    .img-container {
+        height: 1000px; */
+
+/* @media (min-width: 550px) {
+      .img-container {
+        height: 550px;
+      }
+    }
+    
+    @media (min-width: 650px) {
+      .img-container {
+        height: 700px;
+      }
+    } 
+    
+    @media (min-width: 850px) {
+      .dog-info {
+        bottom: 2em;
+        left: 5em;
+      }
+    }
+    @media (min-width: 900px) {
+      .dog-info {
+        bottom: 2em;
+        left: 7em;
+      }
+    }  */
