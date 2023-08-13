@@ -1,4 +1,4 @@
-const dogsData = [
+const monkeyData = [
   {
     name: "Rex",
     avatar: "./images/monkey-img-1.webp",
@@ -144,4 +144,4 @@ const dogsData = [
     hasBeenLiked: false,
   },
 ];
-export default dogsData;
+export default monkeyData;
