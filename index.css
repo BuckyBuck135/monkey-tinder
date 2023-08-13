@@ -9,6 +9,8 @@ body {
   padding: 0;
   border: 0;
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* Header */
@@ -19,10 +21,9 @@ header {
   align-items: center;
   padding: 20px;
 }
-
 .logo {
-  width: 80px;
-  border-radius: 3px;
+  width: 50px;
+  border-radius: 10px;
 }
 
 main {
@@ -37,13 +38,12 @@ main {
 }
 
 .img-container {
-  /* padding: 1em; */
-  /* height: 500px; */
   width: 100%;
   height: auto;
 }
 .monkey-img {
-  max-width: 100%;
+  /* max-width: 100%; */
+  /* max-width: 700px; */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -54,13 +54,13 @@ main {
 
 .monkey-info {
   position: absolute;
-  bottom: 1em;
+  bottom: 0.5em;
   left: 1em;
-  margin-right: 2em;
+  margin-right: 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0.2em;
+  padding: 0.1em;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
@@ -69,23 +69,24 @@ main {
 
 .monkey-name,
 .monkey-bio {
-  color: #f8f8f8;
+  /* color: #f8f8f8; */
   margin: 0;
 }
 
 .monkey-name {
-  font-weight: bold;
+  /* font-weight: bold;
   font-size: 2rem;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.25em; */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .monkey-bio {
-  color: white;
+  /* color: white; */
   font-weight: 400;
+  color: #b7b7b7;
   line-height: 32px;
   font-size: 1rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  color: whitesmoke;
+  /*color: whitesmoke; */
 }
 
 .nope-badge,
@@ -93,10 +94,11 @@ main {
   display: none;
   width: 40%;
   position: absolute;
-  left: 30px;
-  top: 150px;
+  left: 20px;
+  top: 120px;
   transform: rotate(-35deg);
   z-index: 1;
+  width: 150px;
 }
 
 .action-buttons-container {
@@ -127,7 +129,7 @@ main {
 }
 .like,
 .reject {
-  vertical-align: middle;
+  /* vertical-align: middle; */
   width: 30px;
 }
 
@@ -136,7 +138,7 @@ main {
   margin-bottom: 1em;
   width: 150px;
   height: 200px;
-  width: 100%;
+  /* width: 100%; */
   object-fit: cover;
   border-radius: 10px;
 }
@@ -152,24 +154,22 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2em;
+  gap: 1em;
 }
 
 .end-heading,
 .end-text {
   text-align: center;
   padding: 0 2em;
+  font-weight: bold;
 }
 .match-heading {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: red;
 }
 .non-match-heading {
   color: black;
-}
-.end-text {
-  font-weight: bold;
 }
 .red {
   color: darkred;
@@ -179,7 +179,6 @@ main {
   display: block;
   background-color: red;
   color: white;
-  text-align: center;
   margin: 2em auto;
   padding: 0.5em 2em;
   border-radius: 10px;
@@ -192,3 +191,158 @@ main {
   margin: 0 auto;
   padding: 0 2em;
 }
+
+@media (min-width: 500px) {
+  .post-container {
+    padding: 0 1em;
+  }
+  .logo {
+    width: 70px;
+  }
+  .monkey-info {
+    bottom: 1em;
+    margin-right: 1em;
+    padding: 0.5em;
+  }
+  .monkey-name {
+    font-size: 2rem;
+  }
+  .monkey-bio {
+    font-size: 1.5rem;
+  }
+  .nope-badge,
+.like-badge {
+  width: 200px;
+}
+  .nope-badge,
+  .like-badge {
+    left: 30px;
+    top: 150px;
+  }
+  .action-buttons-container {
+    gap: 2em;
+  }
+  .btn-container {
+    padding: 2.5em;
+  }
+
+  .end-heading,
+  .end-text {
+    text-align: center;
+    padding: 0 2em;
+  }
+  .match-heading {
+    font-weight: bold;
+    font-size: 2rem;
+    color: red;
+  }
+  .non-match-heading {
+    color: black;
+  }
+  .end-text {
+    font-weight: bold;
+  }
+  .red {
+    color: darkred;
+  }
+  .reset {
+    cursor: pointer;
+    display: block;
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin: 2em auto;
+    padding: 0.5em 2em;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .post-container {
+    padding: 0 2em;
+  }
+  header {
+    padding: 2em;
+  }
+  .logo {
+    width: 100px;
+  }
+  .monkey-info {
+    bottom: 2em;
+    margin-right: 2em;
+    padding: 2em;
+  }
+  .monkey-name {
+    font-size: 4rem;
+  }
+  .monkey-bio {
+    font-size: 2rem;
+  }
+  .nope-badge,
+.like-badge {
+  width: 300px;
+}
+  .nope-badge,
+  .like-badge {
+    left: 30px;
+    top: 150px;
+  }
+  .nope-badge,
+  .like-badge {
+    left: 50px;
+    top: 220px;
+  }
+  .action-buttons-container {
+    gap: 6em;
+  }
+  .match-heading {
+    font-size: 3rem;
+  }
+  .end-text {
+    font-size: 2rem;
+  }
+  .reset {
+    margin: 1em auto;
+    padding: 0.5em 2em;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1000px) {
+  .nope-badge,
+  .like-badge {
+    left: 90px;
+    top: 240px;
+    left: 30%;
+    right:30%;
+    margin: auto;
+    top:250;
+    transform: rotate(0)
+  }
+  }
+  .liked-avatar-img {
+    margin-bottom: 2em;
+    width: 200px;
+    height: 250px;
+  }
+  .liked-container {
+    gap: 2em;
+  }
+}
+@media (min-width: 1200px) {
+  .nope-badge,
+  .like-badge {
+    left: 30%;
+    right:30%;
+    margin: auto;
+    top:250;
+    transform: rotate(0)
+  }
+  .liked-avatar-img {
+    margin-bottom: 2em;
+    width: 300px;
+    height: 350px;
+  }
+} */
