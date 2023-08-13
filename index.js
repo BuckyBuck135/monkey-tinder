@@ -79,7 +79,7 @@ function endPageHtml() {
   let symbol = likedMonkeysCount > 0 ? "💖" : "💔";
   likedMonkeysCount > 0
     ? (endPageHeading = `<h2 class=" end-heading match-heading">${symbol}Love is in the air !${symbol}</h2><p class="match-text end-text red">You have identified these ${likedMonkeysCount} possible matches `)
-    : (endPageHeading = `<h2 class="non-match-heading end-heading">${symbol}Oh no, it looks like you are not lucky in love this time !${symbol}</h2><img src="./images/chimp-end-img-no-match.jpg" class="end-image">
+    : (endPageHeading = `<h2 class="non-match-heading end-heading">${symbol}Oh no, it looks like you are not lucky in love this time !${symbol}</h2><img src="./images/sad-monkey-no-match.jpg" class="end-image">
   <p class="non-match-text end-text red">You have identified ${likedMonkeysCount} matches.</p><p class="non-match-text end-text">Please come back later and see if you can find your perfect match </p>`);
 
   let endPageContent = `<div class="summary">${endPageHeading}<div class="liked-container">`;
