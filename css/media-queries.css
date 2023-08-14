@@ -22,9 +22,6 @@
     left: 30px;
     top: 150px;
   }
-  .action-buttons-container {
-    gap: 2em;
-  }
   .btn-container {
     padding: 2.5em;
   }
@@ -32,35 +29,19 @@
   .reject {
     width: 30px;
   }
-
   .end-heading,
   .end-text {
     text-align: center;
     padding: 0 2em;
   }
   .match-heading {
-    font-weight: bold;
     font-size: 2rem;
-    color: red;
   }
   .non-match-heading {
     color: black;
   }
   .end-text {
     font-weight: bold;
-  }
-  .reset {
-    cursor: pointer;
-    display: block;
-    background-color: red;
-    color: white;
-    text-align: center;
-    margin: 2em auto;
-    padding: 0.5em 2em;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
   }
 }
 
@@ -76,7 +57,6 @@
   }
   .monkey-info {
     bottom: 2em;
-    margin-right: 2em;
     padding: 2em;
   }
   .monkey-name {
@@ -100,7 +80,7 @@
   }
   .match-heading,
   .non-match-heading {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .end-text {
     font-size: 2rem;
@@ -112,7 +92,6 @@
   }
   .reset {
     margin: 1em auto;
-    padding: 0.5em 2em;
     font-size: 2rem;
   }
 }
@@ -122,23 +101,21 @@
   .like-badge {
     left: 90px;
     top: 240px;
-    left: 30%;
-    right: 30%;
+    left: 140px;
     margin: auto;
-    top: 250;
-    transform: rotate(0);
+    top: 250px;
   }
   .liked-container {
     gap: 2em;
   }
 }
+
 @media (min-width: 1200px) {
   .nope-badge,
   .like-badge {
     left: 30%;
     right: 30%;
-    margin: auto;
-    top: 250;
+    top: 150px;
     transform: rotate(0);
   }
 }

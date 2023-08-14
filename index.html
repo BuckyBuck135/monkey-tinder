@@ -10,57 +10,67 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/media-queries.css" />
   </head>
-
   <body>
     <header>
       <img
         src="./images/user-profile-icon.png"
         class="user-profile-icon"
-        alt=""
+        alt="user profile icon"
       />
-      <img src="./images/monkey-icon-image.jpg" class="logo" alt="" />
-      <img src="./images/speech-bubble-icon.svg" alt="" />
+      <img
+        src="./images/monkey-icon-image.jpg"
+        class="logo"
+        alt="logo with a cute monkey"
+      />
+      <img src="./images/speech-bubble-icon.svg" alt="speech bubble icon" />
     </header>
-
     <main>
       <section class="post-container" id="post-container">
         <!-- Rendered dynamically in JS-->
       </section>
-
-      <section class="badge-container">
-        <img src="./images/badge-nope.png" class="nope-badge badge" />
-        <img src="./images/badge-like.png" class="like-badge badge" />
+      <section>
+        <img
+          src="./images/badge-nope.png"
+          class="nope-badge badge"
+          id="nope-badge"
+          alt="badge
+                    appearing over the image with the word NOPE"
+        />
+        <img
+          src="./images/badge-like.png"
+          class="like-badge badge"
+          id="like-badge"
+          alt="badge
+                    appearing over the image with the word LIKE"
+        />
       </section>
     </main>
-
     <section class="action-buttons-container" id="action-buttons-container">
       <button
         class="btn-container btn-reject"
         id="reject-btn"
-        aria-label="reject badge"
+        aria-label="reject button"
       >
         <img
           src="./images/icon-cross.png"
           class="reject action-btn"
           id="reject"
-          alt=""
+          alt="button with a red cross"
         />
       </button>
-
       <button
         class="btn-container btn-like"
         id="like-btn"
-        aria-label="like badge"
+        aria-label="like button"
       >
         <img
           src="./images/icon-heart.png"
           class="like action-btn"
           id="like"
-          alt=""
+          alt="button with a green heart"
         />
       </button>
     </section>
