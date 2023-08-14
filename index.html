@@ -10,7 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./index.css" />
+
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/media-queries.css" />
   </head>
 
   <body>
@@ -36,7 +38,11 @@
     </main>
 
     <section class="action-buttons-container" id="action-buttons-container">
-      <button class="btn-container" id="reject-btn" aria-label="reject badge">
+      <button
+        class="btn-container btn-reject"
+        id="reject-btn"
+        aria-label="reject badge"
+      >
         <img
           src="./images/icon-cross.png"
           class="reject action-btn"
@@ -45,7 +51,11 @@
         />
       </button>
 
-      <button class="btn-container" id="like-btn" aria-label="like badge">
+      <button
+        class="btn-container btn-like"
+        id="like-btn"
+        aria-label="like badge"
+      >
         <img
           src="./images/icon-heart.png"
           class="like action-btn"
@@ -54,6 +64,6 @@
         />
       </button>
     </section>
-    <script src="./index.js" type="module"></script>
+    <script src="../js/index.js" type="module"></script>
   </body>
 </html>

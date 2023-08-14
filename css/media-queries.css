@@ -1,0 +1,143 @@
+@media (min-width: 500px) {
+  .post-container {
+    padding: 0 1em;
+  }
+  .logo {
+    width: 70px;
+  }
+  .monkey-info {
+    bottom: 1em;
+    margin-right: 1em;
+    padding: 0.5em;
+  }
+  .monkey-name {
+    font-size: 2rem;
+  }
+  .monkey-bio {
+    font-size: 1.5rem;
+  }
+  .nope-badge,
+  .like-badge {
+    width: 200px;
+    left: 30px;
+    top: 150px;
+  }
+  .action-buttons-container {
+    gap: 2em;
+  }
+  .btn-container {
+    padding: 2.5em;
+  }
+  .like,
+  .reject {
+    width: 30px;
+  }
+
+  .end-heading,
+  .end-text {
+    text-align: center;
+    padding: 0 2em;
+  }
+  .match-heading {
+    font-weight: bold;
+    font-size: 2rem;
+    color: red;
+  }
+  .non-match-heading {
+    color: black;
+  }
+  .end-text {
+    font-weight: bold;
+  }
+  .reset {
+    cursor: pointer;
+    display: block;
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin: 2em auto;
+    padding: 0.5em 2em;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .post-container {
+    padding: 0 2em;
+  }
+  header {
+    padding: 2em;
+  }
+  .logo {
+    width: 100px;
+  }
+  .monkey-info {
+    bottom: 2em;
+    margin-right: 2em;
+    padding: 2em;
+  }
+  .monkey-name {
+    font-size: 4rem;
+  }
+  .monkey-bio {
+    font-size: 2rem;
+  }
+  .nope-badge,
+  .like-badge {
+    width: 300px;
+    left: 50px;
+    top: 220px;
+  }
+  .action-buttons-container {
+    gap: 6em;
+  }
+  .like,
+  .reject {
+    width: 60px;
+  }
+  .match-heading {
+    font-size: 3rem;
+  }
+  .end-text {
+    font-size: 2rem;
+  }
+  .liked-avatar-img {
+    margin-bottom: 2em;
+    width: 200px;
+    height: 250px;
+  }
+  .reset {
+    margin: 1em auto;
+    padding: 0.5em 2em;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .nope-badge,
+  .like-badge {
+    left: 90px;
+    top: 240px;
+    left: 30%;
+    right: 30%;
+    margin: auto;
+    top: 250;
+    transform: rotate(0);
+  }
+  .liked-container {
+    gap: 2em;
+  }
+}
+@media (min-width: 1200px) {
+  .nope-badge,
+  .like-badge {
+    left: 30%;
+    right: 30%;
+    margin: auto;
+    top: 250;
+    transform: rotate(0);
+  }
+}

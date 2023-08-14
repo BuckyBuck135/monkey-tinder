@@ -1,5 +1,6 @@
 const monkeyData = [
   {
+    id: 1,
     name: "Rex",
     avatar: "./images/monkey-img-1.webp",
     age: 1,
@@ -8,6 +9,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 2,
     name: "Bella",
     avatar: "./images/monkey-img-2.webp",
     age: 6,
@@ -16,6 +18,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 3,
     name: "Polly",
     avatar: "./images/monkey-img-3.jpg",
     age: 14,
@@ -24,6 +27,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 4,
     name: "Sidney",
     avatar: "./images/monkey-img-4.jpg",
     age: 3,
@@ -32,6 +36,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 5,
     name: "Sally",
     avatar: "./images/monkey-img-5.jpg",
     age: 10,
@@ -40,6 +45,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 6,
     name: "Teddy",
     avatar: "./images/monkey-img-6.jpg",
     age: 13,
@@ -48,6 +54,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 7,
     name: "Charlie",
     avatar: "./images/monkey-img-7.jpg",
     age: 8,
@@ -56,6 +63,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 8,
     name: "Spike",
     avatar: "./images/monkey-img-8.jpg",
     age: 15,
@@ -64,6 +72,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 9,
     name: "Arnold",
     avatar: "./images/monkey-img-9.jpg",
     age: 18,
@@ -72,6 +81,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 10,
     name: "Gertrude",
     avatar: "./images/monkey-img-10.jpg",
     age: 35,
@@ -80,6 +90,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 11,
     name: "Twiggy",
     avatar: "./images/monkey-img-11.jpg",
     age: 21,
@@ -88,6 +99,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 12,
     name: "George",
     avatar: "./images/monkey-img-12.jpg",
     age: 24,
@@ -96,6 +108,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 13,
     name: "Hannah",
     avatar: "./images/monkey-img-1.jpg",
     age: 26,
@@ -104,6 +117,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 14,
     name: "Terrence",
     avatar: "./images/monkey-img-14.jpg",
     age: 27,
@@ -112,6 +126,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 15,
     name: "Robbie",
     avatar: "./images/monkey-img-15.jpg",
     age: 2,
@@ -120,6 +135,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 16,
     name: "Sheila",
     avatar: "./images/monkey-img-16.jpg",
     age: 15,
@@ -128,6 +144,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 17,
     name: "Screech",
     avatar: "./images/monkey-img-17.jpg",
     age: 7,
@@ -136,6 +153,7 @@ const monkeyData = [
     hasBeenLiked: false,
   },
   {
+    id: 18,
     name: "Arthur",
     avatar: "./images/monkey-img-2.jpg",
     age: 21,

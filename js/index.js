@@ -1,80 +1,78 @@
 import monkeyData from "./data.js";
 import Monkey from "./monkey.js";
 
-const rejectEl = document.getElementById("reject");
-const likeEl = document.getElementById("like");
-const stickerEl = document.getElementById("sticker-container");
 const postContainerEl = document.getElementById("post-container");
-const monkeyInfoEl = document.getElementById("monkey-info");
-const actionBtnContainer = document.getElementById("action-buttons-container");
+// const actionBtnContainer = document.getElementById("action-buttons-container");
 
 let currentMonkeyIndex = 0;
 let currentMonkey = new Monkey(monkeyData[currentMonkeyIndex]);
 let likedMonkeysCount = 0;
 let likedArray = [];
 
-render(currentMonkey);
+render();
 
 function render() {
   postContainerEl.innerHTML = currentMonkey.getMonkeyHtml();
   document.querySelector(".nope-badge").style.display = "none";
   document.querySelector(".like-badge").style.display = "none";
-  //   delay();
 }
 
-function delay() {
-  setTimeout(render, 1500);
-}
+document.body.addEventListener("click", function (e) {
+  const targetId = e.target.id;
+  console.log(targetId);
 
-actionBtnContainer.addEventListener("click", function (e) {
-  const target = e.target.id;
-  console.log(target);
-
-  if (target === "like") {
+  if (targetId === "like") {
     currentMonkey.hasBeenLiked = true;
     currentMonkey.hasBeenSwiped = true;
     likedMonkeysCount++;
     likedArray.push(currentMonkey);
     document.querySelector(".like-badge").style.display = "block";
-
+    getNewMonkey();
     console.log(
       currentMonkey.hasBeenLiked,
       currentMonkey.hasBeenSwiped,
       likedMonkeysCount
     );
-  }
-  if (target === "reject") {
+  } else if (targetId === "reject") {
     currentMonkey.hasBeenLiked = false;
     currentMonkey.hasBeenSwiped = true;
     document.querySelector(".nope-badge").style.display = "block";
+    getNewMonkey();
     console.log(
       currentMonkey.hasBeenSwiped,
       currentMonkey.hasBeenLiked,
       likedMonkeysCount
     );
+  } else if (targetId.startsWith("liked-avatar-img")) {
+    const monkeyId = targetId.replace("liked-avatar-img-", ""); // Extract the monkey's id
+    const likedMonkey = likedArray.find((monkey) => monkey.id === monkeyId);
+
+    if (likedMonkey) {
+      openMatchingScreen(likedMonkey);
+    }
   }
-  //   render();
-  getNewMonkey();
 });
 
 function getNewMonkey() {
   currentMonkeyIndex++;
   if (currentMonkeyIndex < monkeyData.length) {
     currentMonkey = new Monkey(monkeyData[currentMonkeyIndex]);
-    // render();
-    delay();
+    delay(render);
   } else {
-    setTimeout(endPageHtml, 1500);
-    // endPageHtml();
+    delay(endPageHtml);
   }
 }
 
-// function delay() {
-//   setTimeout(render, 1500);
-// }
+function delay(page) {
+  setTimeout(page, 1000);
+}
 
 function endPageHtml() {
+  document.querySelector(".nope-badge").style.display = "none";
+  document.querySelector(".like-badge").style.display = "none";
+  document.querySelector(".action-buttons-container").style.display = "none";
   console.log("This is the end page");
+
   let endPageHeading = " ";
   let symbol = likedMonkeysCount > 0 ? "💖" : "💔";
   likedMonkeysCount > 0
@@ -87,18 +85,35 @@ function endPageHtml() {
   for (const likedMonkey of likedArray) {
     endPageContent += `
     <div class="liked-img-container">
-    <img src= ${likedMonkey.avatar} class="liked-avatar-img"></div>`;
+    <img src= ${likedMonkey.avatar} class="liked-avatar-img" id="liked-avatar-img-${likedMonkey.id}"></div>`;
   }
-  endPageContent += `</div> <button class="reset" id="reset">Reset</button></div>`;
 
+  endPageContent += `</div> <button class="reset" id="reset">Reset</button></div>`;
   postContainerEl.innerHTML = endPageContent;
 
-  document.querySelector(".nope-badge").style.display = "none";
-  document.querySelector(".like-badge").style.display = "none";
-  document.querySelector(".action-buttons-container").style.display = "none";
+  for (const likedMonkey of likedArray) {
+    let imgElement = document.getElementById(
+      `liked-avatar-img-${likedMonkey.id}`
+    );
+    console.log(imgElement);
+    imgElement.addEventListener("click", function () {
+      console.log("Clicked on monkey: ${likedMonkey.id}");
+      openMatchingScreen(likedMonkey);
+    });
+  }
+
   reset();
 }
 
+function openMatchingScreen(monkey) {
+  const matchingScreenHtml = `<div class="matching-screen">
+      <h2 class="match-monkey-name">💖 Meet ${monkey.name} 💖</h2>
+        <img src="${monkey.avatar}" alt="${monkey.name}" class="matching-image">
+      </div>
+      </div> <button class="reset" id="reset">Reset</button></div>`;
+  postContainerEl.innerHTML = matchingScreenHtml;
+  reset();
+}
 function reset() {
   document.getElementById("reset").addEventListener("click", function () {
     document.querySelector(".action-buttons-container").style.display = "flex";
