@@ -7,7 +7,7 @@ class Monkey {
     const { name, avatar, age, bio } = this;
     let monkeyHtml = `<div class="monkey-container">
   <div class="img-container">
-    <img src="${avatar}" class="monkey-img">
+    <img src="${avatar}" class="monkey-img" id="monkey-img">
   </div>
   <div class="monkey-info">
     <h1 class="monkey-name">${name}, ${age}</h1>

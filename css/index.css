@@ -50,6 +50,9 @@ header {
   display: block;
   border-radius: 10px;
   aspect-ratio: 190/253;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+  transform: scale(0.8);
 }
 .monkey-info {
   position: absolute;
@@ -119,6 +122,7 @@ header {
 
 .liked-avatar-img {
   display: block;
+  cursor: pointer;
   /* margin-bottom: 1em; */
   /* width: 100px; */
   height: 150px;
@@ -207,4 +211,13 @@ header {
   background-color: #dbfff4;
   filter: drop-shadow(0px 10px 20px #ccf1e6);
   fill: #dbfff4;
+}
+.reset:hover,
+.reset.focus {
+  background-color: darkred;
+  transform: scale(1.1);
+}
+.liked-avatar-img:hover,
+.liked-avatar-img:focus {
+  transform: scale(1.3);
 }

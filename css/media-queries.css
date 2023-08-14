@@ -98,8 +98,9 @@
   .reject {
     width: 60px;
   }
-  .match-heading {
-    font-size: 3rem;
+  .match-heading,
+  .non-match-heading {
+    font-size: 2rem;
   }
   .end-text {
     font-size: 2rem;
