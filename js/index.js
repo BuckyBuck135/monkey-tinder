@@ -6,7 +6,7 @@ const actionButtonsContainer = document.getElementById(
   "action-buttons-container"
 );
 const nopeBadge = document.getElementById("nope-badge");
-const likeBadge = document.getElementById("nope-badge");
+const likeBadge = document.getElementById("like-badge");
 
 let currentMonkeyIndex = 0;
 let currentMonkey = new Monkey(monkeyData[currentMonkeyIndex]);
