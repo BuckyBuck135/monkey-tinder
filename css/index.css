@@ -110,6 +110,13 @@ header {
   width: 20px;
 }
 /* End Page */
+
+/*new*/
+/* .summary {
+  background-color: red;
+  min-height: 100vh;
+} */
+
 .liked-avatar-img {
   display: block;
   cursor: pointer;
