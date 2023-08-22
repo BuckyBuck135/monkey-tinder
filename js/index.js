@@ -35,17 +35,44 @@ function handleSwipe(e) {
   }
 }
 
+// function handleLikedMonkeyClick(e) {
+//   const targetId = e.target.id;
+//   if (targetId.startsWith("liked-avatar-img")) {
+//     const monkeyId = targetId.replace("liked-avatar-img-", "");
+//     const likedMonkey = likedArray.find((monkey) => monkey.id === monkeyId);
+
+//     if (likedMonkey) {
+//       openMatchingScreen(likedMonkey);
+//     }
+//   }
+// }
+
+///// review: shortening the function /////
+// function handleLikedMonkeyClick(e) {
+//   const targetId = e.target.id;
+//   const monkeyId = targetId.replace("liked-avatar-img-", "");
+//   const likedMonkey = likedArray.find(monkey => monkey.id === monkeyId);
+
+//   if (likedMonkey) {
+//     openMatchingScreen(likedMonkey);
+//   }
+// }
+
+///// review: actually, let's refactor it instead :D /////
 function handleLikedMonkeyClick(e) {
-  const targetId = e.target.id;
-  if (targetId.startsWith("liked-avatar-img")) {
-    const monkeyId = targetId.replace("liked-avatar-img-", "");
-    const likedMonkey = likedArray.find((monkey) => monkey.id === monkeyId);
+
+  // .closest() => find the closest ancestor element. This ensures that the event handler works even if the click happens on the img element itself or on any child element within the container.
+  const container = e.target.closest('.liked-img-container'); 
+  if (container) {
+    const monkeyId = container.dataset.monkeyId;
+    const likedMonkey = monkeyData.find(monkey => monkey.id == monkeyId); //pay attention to == v. ===
 
     if (likedMonkey) {
       openMatchingScreen(likedMonkey);
     }
   }
 }
+
 
 // Render function including setting transition effects between monkey images and hiding the badges
 function render() {
@@ -92,25 +119,35 @@ const endPageHtml = () => {
         <p class="end-text">Please come back later and see if you can find your perfect match </p>`;
 
   let endPageContent = `<div class="summary">${endPageHeading}<div class="liked-container">`;
+
+  ///// review: we move the ID handling from the img to the div with data attribute /////
+  // for (const likedMonkey of likedArray) {
+  //   endPageContent += `
+  //   <div class="liked-img-container">
+  //   <img src= ${likedMonkey.avatar} class="liked-avatar-img" id="liked-avatar-img-${likedMonkey.id}" alt="monkey-image"></div>`;
+  // }
+
   for (const likedMonkey of likedArray) {
     endPageContent += `
-    <div class="liked-img-container">
-    <img src= ${likedMonkey.avatar} class="liked-avatar-img" id="liked-avatar-img-${likedMonkey.id}" alt="monkey-image"></div>`;
+    <div class="liked-img-container" data-monkey-id="${likedMonkey.id}">
+      <img src="${likedMonkey.avatar}" class="liked-avatar-img" alt="monkey-image">
+    </div>`;
   }
 
   endPageContent += `</div> <button class="reset" id="reset">Reset</button></div>`;
   postContainerEl.innerHTML = endPageContent;
 
-  for (const likedMonkey of likedArray) {
-    let imgElement = document.getElementById(
-      `liked-avatar-img-${likedMonkey.id}`
-    );
-    console.log(imgElement);
-    imgElement.addEventListener("click", function () {
-      console.log("Clicked on monkey: ${likedMonkey.id}");
-      openMatchingScreen(likedMonkey);
-    });
-  }
+  ///// review: this part is now taken care of by the click handler /////
+  // for (const likedMonkey of likedArray) {
+  //   let imgElement = document.getElementById(
+  //     `liked-avatar-img-${likedMonkey.id}`
+  //   );
+  //   console.log(imgElement);
+  //   imgElement.addEventListener("click", function () {
+  //     console.log("Clicked on monkey: ${likedMonkey.id}");
+  //     openMatchingScreen(likedMonkey);
+  //   });
+  // }
 
   reset();
 };
@@ -137,3 +174,21 @@ const reset = () => {
     render();
   });
 };
+
+
+
+/////////////////////////
+// For review purposes //
+
+const array1 = [1, 4, 9, 16];
+
+// with arrow function
+// const map1 = array1.map((x) => x * 2);
+
+// without arrow function
+// const map1 = array1.map(function(x) {
+//   return x * 2
+// } );
+
+// console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
